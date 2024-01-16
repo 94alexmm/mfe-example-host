@@ -1,19 +1,25 @@
-<div cdkMenuBar class="menu-root">
-    <button class="menu-bar-item" cdkMenuItem [cdkMenuTriggerFor]="file">File</button>
-    <button class="menu-bar-item" cdkMenuItem [cdkMenuTriggerFor]="plugins">Plugins</button>
-  </div>
-  
-  <ng-template #file>
-    <div class="menu" cdkMenu>
-      <button class="menu-item" cdkMenuItem>New Workspace</button>
-      <button class="menu-item" cdkMenuItem>Open Workspace</button>
-    </div>
-  </ng-template>
-  
-  <ng-template #plugins>
-    <div class="menu" cdkMenu>
-      <button class="menu-item" cdkMenuItem>Configure Plugins</button>
-     
-    </div>
-  </ng-template>
-<router-outlet></router-outlet>
+
+ 
+<div>
+    <div cdkMenuBar class="menu-root">
+        <button class="menu-bar-item" cdkMenuItem [cdkMenuTriggerFor]="file">File</button>
+        <button class="menu-bar-item" cdkMenuItem [cdkMenuTriggerFor]="plugins">Plugins</button>
+      </div>
+      
+      <ng-template #file>
+        <div class="menu" cdkMenu>
+          <button class="menu-item" cdkMenuItem>New Workspace</button>
+          <button class="menu-item" cdkMenuItem>Open Workspace</button>
+        </div>
+      </ng-template>
+      
+      <ng-template #plugins>
+        <div class="menu" cdkMenu>
+          <button class="menu-item" cdkMenuItem>Configure Plugins</button>
+          <hr>
+          <button *ngFor="let plugin of cachedPlugins"  class="menu-item" cdkMenuItem (click)="loadRemoteComponent(plugin.componentName,plugin.remoteLocation,plugin.moduleName)">{{plugin.id}}</button>
+         
+        </div>
+      </ng-template>
+</div>
+    <ng-container #componentContainer></ng-container>

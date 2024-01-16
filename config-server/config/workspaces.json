@@ -1,0 +1,22 @@
+{
+    "workspaces": [
+        {
+            "id": "1",
+            "name":"Demo 1",
+            "components": [
+                {
+                    "id": "1",
+                    "pluginId": "mfeChart",
+                    "componentId": "mfeChart"
+                }
+            ],
+            "layout": {
+                "type": "row",
+                "content": {
+                    "type": "component",
+                    "id": "1"
+                }
+            }
+        }
+    ]
+}

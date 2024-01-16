@@ -64,14 +64,15 @@
 							"extraWebpackConfig": "webpack.prod.config.js"
 						},
 						"development": {
-							"buildTarget": "mfe-host:build:development"
+							"buildTarget": "mfe-host:build:development",
 						}
 					},
 					"defaultConfiguration": "development",
 					"options": {
 						"port": 4200,
 						"publicHost": "http://localhost:4200",
-						"extraWebpackConfig": "webpack.config.js"
+						"extraWebpackConfig": "webpack.config.js",
+						"proxyConfig": "src/proxy.conf.json"
 					}
 				},
 				"extract-i18n": {

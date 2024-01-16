@@ -1,0 +1,11 @@
+{
+    "plugins": [
+        {
+            "id": "mfeChart",
+            "componentName": "AppComponent",
+            "moduleName": "./mfeChart",
+            "remoteLocation": "http://localhost:4201/remoteEntry.js",
+            "configuration": {}
+        }
+    ]
+}
