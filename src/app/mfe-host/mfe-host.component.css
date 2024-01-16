@@ -1,0 +1,85 @@
+
+.menu-root{
+    background-color: #414141;
+}
+
+
+.menu-bar-item {
+    cursor: pointer;
+    border: none;
+    background-color: #414141;
+    color:white;
+    user-select: none;
+    min-width: 34px;
+    line-height: 26px;
+    padding: 0 16px;
+  }
+  
+  .menu-bar-item:hover {
+    background-color: orange;
+    color:black;
+  }
+  
+  .menu {
+    display: inline-flex;
+    flex-direction: column;
+    min-width: 180px;
+    max-width: 280px;
+    background-color: #414141;
+    padding: 6px 0;
+  }
+  
+  .menu hr {
+    width: 100%;
+    color:white;
+  }
+  
+  .menu .menu-group {
+    display: inline-flex;
+    flex-direction: column;
+  }
+  
+  .menu .menu-item {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+  
+    user-select: none;
+    min-width: 64px;
+    line-height: 36px;
+    padding: 0 16px;
+  
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex: 1;
+    color:white;
+  }
+  
+  .menu-item > span {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: flex-end;
+
+  }
+  
+  .menu .menu-item:hover {
+    background-color: orange;
+    color:black;
+  }
+  
+  .menu .menu-item[role='menuitemradio'][aria-checked='true'] {
+    background-color: orange;
+  }
+  .menu .menu-item[role='menuitemcheckbox'][aria-checked='true'] {
+    background-color: orange;
+  }
+  .menu .menu-item:active {
+    background-color: orange;
+  }
+  
+  .menu-bar-item[aria-expanded='true'],
+  .menu-item[aria-expanded='true'] {
+    background-color: orange !important;
+  }

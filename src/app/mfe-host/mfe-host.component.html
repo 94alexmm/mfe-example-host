@@ -1,0 +1,19 @@
+<div cdkMenuBar class="menu-root">
+    <button class="menu-bar-item" cdkMenuItem [cdkMenuTriggerFor]="file">File</button>
+    <button class="menu-bar-item" cdkMenuItem [cdkMenuTriggerFor]="plugins">Plugins</button>
+  </div>
+  
+  <ng-template #file>
+    <div class="menu" cdkMenu>
+      <button class="menu-item" cdkMenuItem>New Workspace</button>
+      <button class="menu-item" cdkMenuItem>Open Workspace</button>
+    </div>
+  </ng-template>
+  
+  <ng-template #plugins>
+    <div class="menu" cdkMenu>
+      <button class="menu-item" cdkMenuItem>Configure Plugins</button>
+     
+    </div>
+  </ng-template>
+<router-outlet></router-outlet>
