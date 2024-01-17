@@ -22,11 +22,10 @@ export interface PluginResponse {
 }
 
 export interface MfePlugin {
-  id: string
-  componentName: string
-  remoteLocation: string
-  moduleName:string
-  configuration: {}
+  id: string;
+  components:MfeComponent[];
+  remoteLocation: string;
+  configuration: {};
 }
 
 export interface WorkspaceResponse {
@@ -35,4 +34,10 @@ export interface WorkspaceResponse {
 
 export interface Workspace {
   id: string
+}
+
+export interface MfeComponent {
+  name: string;
+  moduleName:string;
+  componentName: string;
 }

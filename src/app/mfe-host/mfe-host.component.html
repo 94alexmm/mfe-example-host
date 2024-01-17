@@ -17,8 +17,9 @@
         <div class="menu" cdkMenu>
           <button class="menu-item" cdkMenuItem>Configure Plugins</button>
           <hr>
-          <button *ngFor="let plugin of cachedPlugins"  class="menu-item" cdkMenuItem (click)="loadRemoteComponent(plugin.componentName,plugin.remoteLocation,plugin.moduleName)">{{plugin.id}}</button>
-         
+          <ng-container *ngFor="let plugin of cachedPlugins" >
+            <button  *ngFor="let component of plugin.components" class="menu-item" cdkMenuItem (click)="loadRemoteComponent(component.componentName,plugin.remoteLocation,component.moduleName)">{{component.name}}</button>
+          </ng-container>
         </div>
       </ng-template>
 </div>

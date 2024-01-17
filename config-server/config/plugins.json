@@ -2,8 +2,18 @@
     "plugins": [
         {
             "id": "mfeChart",
-            "componentName": "AppComponent",
-            "moduleName": "./mfeChart",
+            "components": [
+                {
+                    "name":"Bar chart",
+                    "moduleName": "./mfe-bar-chart",
+                    "componentName": "MfeBarChartComponent"
+                },
+                {
+                    "name":"Line chart",
+                    "moduleName": "./mfe-line-chart",
+                    "componentName": "MfeLineChartComponent"
+                }
+            ],
             "remoteLocation": "http://localhost:4201/remoteEntry.js",
             "configuration": {}
         }
